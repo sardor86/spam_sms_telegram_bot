@@ -14,6 +14,6 @@ def spam_sms(number: str, proxy: dict, site_list: list, quantity_sms: int) -> No
             post(site['url'], json={site['params_for_number']: phone_number}, proxies=proxy)
 
 
-def start_spam(number: int, quantity_sms: int) -> None:
+def begin_spam_sms(number: int, quantity_sms: int) -> None:
     for _ in range(4):
-        Thread(target=spam_sms, args=(str(number), PROXY, SITE_LIST, quantity_sms/4)).start()
+        Thread(target=spam_sms, args=(str(number), PROXY, SITE_LIST, quantity_sms)).start()
