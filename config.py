@@ -1,8 +1,9 @@
-import os
-from dotenv import load_dotenv
+from environs import Env
 
-load_dotenv()
-TOKEN = os.environ['TOKEN']
+env = Env()
+env.read_env('.env')
+
+TOKEN = env.str('TOKEN')
 
 
 PROXY = {
