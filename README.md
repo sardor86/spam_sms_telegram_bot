@@ -11,9 +11,9 @@
 ### For example ```TOKEN=YourToken```
 ### Thirsty, you should build bot with command 
 ```bash
-docker build --tag sstb-docker .
+docker build -t telegram_bot .
 ```
 ### And run bot with command
 ```bash
-docker run sstb-docker
+docker run -d telegram_bot --name bot_docker
 ```
